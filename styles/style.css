@@ -27,16 +27,19 @@
     font-family: 'Futura Light';
     src: url('../fonts/futura_light_bt-webfont.woff2') format('woff2'),
          url('../fonts/futura_light_bt-webfont.woff') format('woff');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Futura Book';
     src: url('../fonts/futura_book_font-webfont.woff2') format('woff2'),
          url('../fonts/futura_book_font-webfont.woff') format('woff');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Futura Medium';
     src: url('../fonts/futura_medium_bt-webfont.woff2') format('woff2'),
          url('../fonts/futura_medium_bt-webfont.woff') format('woff');
+    font-display: swap;
 }
 
 /* Box sizing rules */
