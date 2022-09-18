@@ -1,0 +1,548 @@
+:root {
+    --clr-primary-100: #008143;
+
+    --clr-secondary-100: #006B52;
+    --clr-secondary-200: #64B32C;
+    --clr-secondary-300: #D5D5D5;
+    --clr-secondary-400: #000000;
+    --clr-secondary-500: #FFFFFF;
+
+    --clr-accent-100: #FFCC00;
+    --clr-accent-200: #E8E000;
+    --clr-accent-300: #4c0f83;
+    --clr-accent-400: #00ffff;
+    --clr-accent-500: #002E55;
+    --clr-accent-600: #C7066E;
+    --clr-accent-700: #EF7C00;
+
+    --ff-header-book: 'Futura Book', sans-serif;
+    --ff-header-medium: 'Futura Medium', sans-serif;
+    --ff-header-light: 'Futura Light', sans-serif;
+
+    /* --ff-primary: Arial, sans-serif; */
+    --ff-primary: 'Futura Book', sans-serif;
+}
+
+@font-face {
+    font-family: 'Futura Light';
+    src: url('../fonts/futura_light_bt-webfont.woff2') format('woff2'),
+         url('../fonts/futura_light_bt-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Futura Book';
+    src: url('../fonts/futura_book_font-webfont.woff2') format('woff2'),
+         url('../fonts/futura_book_font-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../fonts/futura_medium_bt-webfont.woff2') format('woff2'),
+         url('../fonts/futura_medium_bt-webfont.woff') format('woff');
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+body {
+    font-family: var(--ff-primary);
+    color: var(--clr-secondary-400);
+}
+
+#customerFeedback, #process {
+    scroll-margin-top: 100px;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    border-radius: 100vmax;
+    padding: 1.25em 2.5em;
+    font-family: 'Futura Medium';
+    font-weight: bold;
+    line-height: 1.25rem;
+    color: var(--clr-secondary-400);
+    background-color: var(--clr-accent-100);
+    box-shadow: 0 1em 1.5em -1em rgba(0, 0, 0, 50%);
+}
+
+.visually-hidden {
+    position: absolute;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+.margin-top-200 {
+    margin-top: 2rem;
+}
+
+.margin-500 {
+    margin: 5rem 0;
+}
+
+.primary-block {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-secondary-500);
+}
+
+.secondary-block {
+    background-color: var(--clr-secondary-500);
+    color: var(--clr-secondary-400);
+}
+
+.font-light {
+    color: var(--clr-secondary-500);
+}
+
+/* Slider */
+
+.slider {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.a11y-slider-container > button {
+    display: none;
+}
+
+.a11y-slider-dots {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: .5rem;
+}
+
+.a11y-slider-dots li {
+    display: block;
+    width: .65rem;
+    height: .65rem;
+    padding: 0;
+}
+
+.a11y-slider-dots li button {
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+    border: none!important;
+    background: var(--clr-secondary-300);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.a11y-slider-dots li button.active {
+    background: var(--clr-secondary-400);
+}
+
+.slider > * {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.user-reviews {
+    padding: 4rem 0 0;
+}
+
+.user-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: var(--clr-secondary-100);
+    padding: 5rem 2rem 1rem;
+    box-shadow: 0 0 8px rgb(0 0 0 / .6);
+    height: 100%;
+}
+
+.user-review-image {
+    position: absolute;
+    top: -50px;
+    height: 100px;
+    box-shadow: 0 0 8px rgb(0 0 0 / .6);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.user-review-text {
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / .2);
+}
+
+.user-review-name {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-family: var(--ff-header-medium);
+}
+
+.user-review .rating {
+    margin: 0;
+}
+
+.user-review .rating .star {
+    color: var(--clr-secondary-200);
+    text-shadow: 1px 1px 4px rgb(0 0 0 / .4);
+    margin: 1rem 0 2rem;
+}
+
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.star {
+    color: var(--clr-primary-100);
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 40%)
+}
+/* Navigation */
+
+.primary-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--clr-secondary-500);
+    box-shadow: 0 0 5px var(--clr-secondary-300);
+}
+
+.nav-container {
+    padding: 1.5rem;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    height: 2rem;
+}
+
+.primary-navigation {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: var(--clr-secondary-500);
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+}
+
+.primary-navigation[data-visible] {
+    display: block;
+}
+
+main[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / .8));
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.nav-list li {
+    padding: 1rem 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--clr-secondary-400);
+}
+
+.mobile-menu-button {
+    margin-top: 2rem;
+    padding: 1em 2em;
+    width: 100%;
+}
+
+.mobile-nav-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: .5em;
+
+    width: 1.25rem;
+    aspect-ratio: 1;
+    background-image: url('../images/icon-hamburger.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* .mobile-nav-toggle .icon-close {
+    display: none;
+} */
+
+.mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url('../images/icon-close.svg');
+}
+
+/* Main */
+
+.block-padding {
+    padding: 4rem 0;
+}
+
+.block-padding-s-bottom {
+    padding: 4rem 0 1rem;
+}
+
+.brand-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.block-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 2rem 0;
+    object-position: center;
+}
+
+.primary-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primary-heading {
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0 0 0 / 40%);
+    font-family: var(--ff-header-book);
+    text-align: center;
+}
+
+.primary-heading span, .secondary-heading span {
+    display: block;
+}
+
+.secondary-heading {
+    font-weight: normal;
+    font-family: var(--ff-header-book);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / .2);
+}
+
+.heading-core-100 {
+    font-weight: 900;
+    text-shadow: 3px 3px 4px rgb(0 0 0 / 70%);
+    font-family: var(--ff-header-medium);
+    font-size: 3.25rem;
+    line-height: 3.75rem;
+    color: var(--clr-secondary-200);
+    font-style: italic;
+}
+
+.heading-core-200 {
+    font-weight: 900;
+    font-family: var(--ff-header-medium);
+    color: var(--clr-primary-100);
+    font-size: 2.5rem;
+    font-style: italic;
+    line-height: 2.5rem;
+}
+
+.heading-core-300 {
+    font-weight: 900;
+    font-family: var(--ff-header-medium);
+    color: var(--clr-primary-100);
+    text-align: right;
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 2.25rem;
+}
+
+.heading-regular-100 {
+    font-size: 2rem;
+    line-height: 1rem;
+}
+
+.heading-regular-200 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+.heading-regular-300 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+.heading-regular-400 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.heading-regular-500 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+.heading-padding-right {
+    padding-right: 3rem;
+}
+
+.heading-padding-left {
+    padding-left: 3rem;
+}
+
+.lead {
+    font-size: 1.15rem;
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0 0 0 / 40%);
+    font-family: var(--ff-header-light);
+    text-align: center;
+}
+
+.lead-margin-s {
+    margin: 2rem 0 1rem;
+}
+
+.light-shadow {
+    text-shadow: 2px 2px 4px rgba(0 0 0 / 10%);
+}
+
+.no-shadow {
+    text-shadow: none;
+}
+
+/* User reviews */
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.star {
+    color: var(--clr-primary-100);
+    font-size: 3rem;
+}
+
+
+
+
+
+
+/* Process */
+
+.process-steps {
+    margin-top: 2rem;
+}
+
+.process-step-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.process-step-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 3px solid rgb(0 107 82 / .7);
+    font-weight: bold;
+}
+
+.process-step-title {
+    margin: .75rem 0;
+}
