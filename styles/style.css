@@ -135,6 +135,12 @@ body {
     box-shadow: 0 1em 1.5em -1em rgba(0, 0, 0, 50%);
 }
 
+.button-secondary {
+    background-color: #C7066E;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+}
+
 .visually-hidden {
     position: absolute;
 	position: absolute !important;
