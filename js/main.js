@@ -31,5 +31,6 @@ main.addEventListener("click", () => {
 const slider = new A11YSlider(document.querySelector('.slider'), {
     adaptiveHeight: false,
     dots: true,
-    arrows: false
+    arrows: false,
+    passive: true
 });

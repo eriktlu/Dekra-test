@@ -239,6 +239,7 @@ body {
     position: absolute;
     top: -50px;
     height: 100px;
+    width: auto;
     box-shadow: 0 0 8px rgb(0 0 0 / .6);
     border-radius: 50%;
     margin-bottom: 1rem;
@@ -301,6 +302,7 @@ body {
 
 .nav-logo {
     height: 2rem;
+    width: auto;
 }
 
 .primary-navigation {
@@ -469,7 +471,7 @@ main[data-overlay]::before {
 
 .heading-regular-500 {
     font-size: 2rem;
-    line-height: 1.5rem;
+    line-height: 2.5rem;
     text-align: left;
 }
 
