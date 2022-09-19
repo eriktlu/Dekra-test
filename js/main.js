@@ -22,12 +22,6 @@ main.addEventListener("click", () => {
     }
 })
 
-// function scrollToElement (id) {
-//     var el = document.querySelector('#' + id);
-//     window.scrollTo(el.offset().top-50);
-//     console.log(el.offset().top)
-// }
-
 const slider = new A11YSlider(document.querySelector('.slider'), {
     adaptiveHeight: false,
     dots: true,
